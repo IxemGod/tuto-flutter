@@ -16,24 +16,26 @@ class HomePage extends StatefulWidget{
 
 }
 
-
 // Class de la page d'accueil en stateless car elle n'est pas dynamique
 class HomePageState extends State<HomePage> {
-
-  int counter = 0;
 
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: const Text("Appli"),elevation: 12,),
-      body: Center(child: Text("Banjour $counter"),),
-      floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            setState(() {
-              counter += 1;
-            });
-          },
-        child: Icon(Icons.add),
+      appBar: AppBar(title: const Text("Container"),elevation: 12,),
+      body: Container(
+        child: Text("Bonjour"),
+        padding: const EdgeInsets.all(100),
+        margin: const EdgeInsets.all(10),
+        /* padding: EdgeInsets.only(top: 100, left: 50),*/
+        /* alignment: Alignment.topLeft,*/
+        alignment: Alignment.center,
+        height: 300,
+        width: 400,
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(20)
+        ),
       ),
     );
   }
