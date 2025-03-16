@@ -23,22 +23,18 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: const Text("Column"),elevation: 12,),
-      body: Row(
-
-        // Allignement vertical sur l'axe des y
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-
-        // Allignement horizontal sur l'axe des abscices
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
-          Icon(Icons.thumb_up),
-          Text("Peter Porker"),
-          Image.network("https://i.pinimg.com/736x/ca/76/50/ca76502bd827d799537d9dc75eb38a5b.jpg", width: 200,),
-          Text("Spider-cochon"),
-          Icon(Icons.thumb_down),
-
+          // La taille de l'image s'adapte tout seule à la fenêtre
+          Image.network("https://upload.wikimedia.org/wikipedia/commons/1/14/CCRM_Renault_Kerax_-_Gallin_%281%29.jpg", width: 250,),
+          Text("Camion Citerne Rurale"),
+          Image.network("https://lh5.googleusercontent.com/proxy/8UzeMa7FA8rWxFhJ3rzT850pXLErvspFFulHp5AuiqP9AEZLAfF_CTfpvvNZ0dTtyMa2-0NJUNmrHSVKRgBnKK7GIQPAFOD9ArHPiuZwlPVTipeUqNRx", width: 250,),
+          Text("Fourgon Pompe Tone"),
+          Image.network("https://allo18.fr/wp-content/uploads/2023/12/OUVERTURE.jpg", width: 250,),
+          Text("Bras Élévateur Articulé")
         ],
-      )
+      ),
     );
   }
 }
