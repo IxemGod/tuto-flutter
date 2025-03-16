@@ -22,21 +22,20 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: const Text("Container"),elevation: 12,),
-      body: Container(
-        child: Text("Bonjour"),
-        padding: const EdgeInsets.all(100),
-        margin: const EdgeInsets.all(10),
-        /* padding: EdgeInsets.only(top: 100, left: 50),*/
-        /* alignment: Alignment.topLeft,*/
-        alignment: Alignment.center,
-        height: 300,
-        width: 400,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(20)
-        ),
-      ),
+      appBar: AppBar(title: const Text("Column"),elevation: 12,),
+      body: Column(
+        // Allignement vertical
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // Allignement horizontal
+        crossAxisAlignment: CrossAxisAlignment.end,
+
+        // Children, permet d'avoir plusieur éléments. L'attribut child, lui ne peut poscêder qu'un élément
+        children: [
+          Text("Ezio Auditore - Il Mentore"),
+          Text("\"Requiescat in pace\""),
+          Image.network("https://store-images.s-microsoft.com/image/apps.58021.69011092827716296.e9190db7-6f4c-478c-8555-3edad4336a39.de8bb314-af23-4670-9343-fa78251591c8?q=90&w=480&h=270")
+        ],
+      )
     );
   }
 }
