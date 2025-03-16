@@ -18,22 +18,25 @@ class HomePage extends StatefulWidget{
 
 // Class de la page d'accueil en stateless car elle n'est pas dynamique
 class HomePageState extends State<HomePage> {
-  final List images = [
-    "https://upload.wikimedia.org/wikipedia/commons/1/14/CCRM_Renault_Kerax_-_Gallin_%281%29.jpg",
-    "https://lh5.googleusercontent.com/proxy/8UzeMa7FA8rWxFhJ3rzT850pXLErvspFFulHp5AuiqP9AEZLAfF_CTfpvvNZ0dTtyMa2-0NJUNmrHSVKRgBnKK7GIQPAFOD9ArHPiuZwlPVTipeUqNRx",
-    "https://allo18.fr/wp-content/uploads/2023/12/OUVERTURE.jpg"
+  final List contact = [
+    "Louis Valméras",
+    "Horace Velmont",
+    "Paul Sernine"
   ];
   @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: const Text("Column"),elevation: 12,),
-      body: ListView.builder(
-        itemCount: images.length,
+      body: ListView.separated(
+        itemCount: contact.length,
         itemBuilder: (context, index){
           return Container(
             margin: const EdgeInsets.all(10),
-            child: Image.network(images[ind ex], height: 110,)
+            child: Text(contact[index])
           );
+        },
+        separatorBuilder: (context, index){
+          return const Divider();
         },
       ),
     );
