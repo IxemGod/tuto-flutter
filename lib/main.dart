@@ -23,17 +23,20 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: const Text("Column"),elevation: 12,),
-      body: Column(
-        // Allignement vertical
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // Allignement horizontal
-        crossAxisAlignment: CrossAxisAlignment.end,
+      body: Row(
 
-        // Children, permet d'avoir plusieur éléments. L'attribut child, lui ne peut poscêder qu'un élément
+        // Allignement vertical sur l'axe des y
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+
+        // Allignement horizontal sur l'axe des abscices
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text("Ezio Auditore - Il Mentore"),
-          Text("\"Requiescat in pace\""),
-          Image.network("https://store-images.s-microsoft.com/image/apps.58021.69011092827716296.e9190db7-6f4c-478c-8555-3edad4336a39.de8bb314-af23-4670-9343-fa78251591c8?q=90&w=480&h=270")
+          Icon(Icons.thumb_up),
+          Text("Peter Porker"),
+          Image.network("https://i.pinimg.com/736x/ca/76/50/ca76502bd827d799537d9dc75eb38a5b.jpg", width: 200,),
+          Text("Spider-cochon"),
+          Icon(Icons.thumb_down),
+
         ],
       )
     );
