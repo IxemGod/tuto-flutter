@@ -1,3 +1,5 @@
+import 'package:aplli/pages/home_page.dart';
+import 'package:aplli/pages/setting_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -5,9 +7,10 @@ import 'package:aplli/pages/actus.dart';
 import 'package:aplli/pages/comunautes.dart';
 import 'package:aplli/pages/appels.dart';
 import 'package:aplli/pages/discussion.dart';
+import 'package:aplli/pages/home_page.dart';
 
 void main() {
-  runApp(MaterialApp(
+  /*runApp(MaterialApp(
     theme: ThemeData(
       colorSchemeSeed: Colors.orange,
       scaffoldBackgroundColor: Colors.white,
@@ -15,8 +18,30 @@ void main() {
       home: HomePage(),
       debugShowCheckedModeBanner: false,
 
-  ));
+  ));*/
+  runApp(const MyApp());
 }
+
+class MyApp extends StatelessWidget{
+  const MyApp({super.key,});
+
+  @override
+  Widget build(BuildContext context) {
+    /*return const MaterialApp(
+      home: MyHomePage2(),
+      debugShowCheckedModeBanner: false,
+    );*/
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => MyHomePage2(),
+        '/settings' : (context) => const MySettingPage2(),
+      },
+    );
+  }
+}
+
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -149,7 +174,6 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
-
 
 class HomePage extends StatefulWidget{
   HomePage({super.key});
