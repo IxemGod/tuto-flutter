@@ -10,7 +10,7 @@ import 'package:aplli/pages/discussion.dart';
 import 'package:aplli/pages/home_page.dart';
 
 void main() {
-  /*runApp(MaterialApp(
+  runApp(MaterialApp(
     theme: ThemeData(
       colorSchemeSeed: Colors.orange,
       scaffoldBackgroundColor: Colors.white,
@@ -18,8 +18,8 @@ void main() {
       home: HomePage(),
       debugShowCheckedModeBanner: false,
 
-  ));*/
-  runApp(const MyApp());
+  ));
+  /*runApp(const MyApp());*/
 }
 
 class MyApp extends StatelessWidget{
