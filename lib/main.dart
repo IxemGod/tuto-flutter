@@ -8,6 +8,7 @@ import 'package:aplli/pages/comunautes.dart';
 import 'package:aplli/pages/appels.dart';
 import 'package:aplli/pages/discussion.dart';
 import 'package:aplli/pages/home_page.dart';
+import 'package:aplli/pages/gmail_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,11 +16,26 @@ void main() {
       colorSchemeSeed: Colors.orange,
       scaffoldBackgroundColor: Colors.white,
     ),
-      home: HomePage(),
+      home: AppGmail(),
       debugShowCheckedModeBanner: false,
 
   ));
   /*runApp(const MyApp());*/
+}
+
+class AppGmail extends StatelessWidget{
+  const AppGmail({super.key,});
+
+  @override
+  Widget build(BuildContext context){
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/' : (context) => AppGmailMain(title: 'Gmail',),
+      },
+    );
+  }
 }
 
 class MyApp extends StatelessWidget{
